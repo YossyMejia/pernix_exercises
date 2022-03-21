@@ -34,5 +34,5 @@ function pigIt(text) {
 
 
 //Test
-console.log(pigIt('Pig latin is   cool, !! a ='));
-console.log(pigIt('Hello world !'));
+console.log(alphabetPosition("The sunset sets at twelve o' clock."));
+console.log(alphabetPosition("The sunset sets at twelve o' clock."));
