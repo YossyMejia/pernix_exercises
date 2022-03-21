@@ -9,3 +9,4 @@ const arrayDiff = (arrayToFilter, filter) =>
 console.log(arrayDiff([1,2],[1]))
 console.log(arrayDiff([1,2,2,2,3],[2]))
 console.log(arrayDiff([1,2,2,2,3,5,6,7,4,3,5],[2,5]))
+console.log(arrayDiff([1,2,3,4,5,6,7,8,9,10,11,12,13],[5,6,7,8,9]))

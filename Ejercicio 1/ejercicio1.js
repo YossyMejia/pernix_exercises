@@ -30,7 +30,7 @@ function check_letter(letter, letters_array) {
 
 // Verificacion de que todos los objetos tengan el mismo valor 
 // en el atributo "ammount" 
-const check_letters_array = array => array.every( value => value.ammount === array[0].ammount );
+const check_letters_amount = array => array.every( value => value.ammount === array[0].ammount );
 
 
 // Se recorre la cadena de caracteres y se hace la comprobracion al final de si la cantidad de 
@@ -40,7 +40,7 @@ function XO(text) {
     for (const letter of text) {
         check_letter(letter, letters_array);
     }
-    let result = check_letters_array(letters_array);
+    let result = check_letters_amount(letters_array);
     return result;
 }
 
@@ -51,3 +51,4 @@ console.log(XO("xooxx"));
 console.log(XO("ooxXm"));
 console.log(XO("zpzpzpp"));
 console.log(XO("zzoo"));
+console.log(XO("xoxo!_axboa_!oxox"));

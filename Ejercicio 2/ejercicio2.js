@@ -4,7 +4,8 @@ let ASCII_STANDARDIZATION_VALUE = 96;
 
 
 //calcular el valor ascii de una letra estandarizado
-const get_ascii_value = (letter, standarization_value) => letter.charCodeAt() - standarization_value; 
+const get_ascii_value = (letter, standarization_value) => 
+    letter.charCodeAt() - standarization_value; 
 
 
 // Maximo color permitido por el momento, en caso de cambiar en un futuro se modifica
@@ -45,3 +46,6 @@ const printer_error = (control_output) => {
 //Test
 console.log(printer_error("aaabbbbhaijjjm"))
 console.log(printer_error("aaaxbbbbyyhwawiwjjjwwm"))
+console.log(printer_error("abcdefghijklm"))
+console.log(printer_error("abcdefghijklmnopqrstuvwzyz"))
+console.log(printer_error("aaaamz"))

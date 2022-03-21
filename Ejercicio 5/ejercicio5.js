@@ -1,38 +1,37 @@
-/*
-Move the first letter of each word to the end of it, then add "ay" to the end of the word. Leave punctuation marks untouched.
-
-pigIt('Pig latin is cool'); // igPay atinlay siay oolcay
-pigIt('Hello world !');     // elloHay orldway !
-*/
+// Valor usado para estandarizar los valores de las letras de ascii, asi la secuencia 
+// va a=1, b=2...
+let ASCII_STANDARDIZATION_VALUE = 96;
 
 
-//B
-function process_word(word){
-    if(word.length > 1){
-        const punctuation_regex = new RegExp("[^A-Za-z0-9]");
-        if (punctuation_regex.test(word)) {
-            console.log("es signo",word);
-        }
-        return word;
-    }
-    else{
-        return word;
-    }
-}
+// Calcular el valor ascii de una letra estandarizado
+const get_ascii_value = (letter, standarization_value) => 
+    letter.charCodeAt() - standarization_value; 
 
 
-//A
-function pigIt(text) {
-    let text_array = text.split(' '); //separar el string por cada espacio 
+// Caclulca la posicion de una letra en el alfabeto
+const getAlphabetPossition = (letter) => 
+    get_ascii_value(letter.toLowerCase(), ASCII_STANDARDIZATION_VALUE);
+
+
+// Verifica si un caracter es una letra
+const isLetter = (letter) => letter.toLowerCase() != letter.toUpperCase();
+
+
+// Recibe un string y devuelve la posicion de cada letra en el alfabeto separados
+// por un espacio 
+function alphabetPosition(text) {
+    let text_array = text.split(''); //separar el string por cada letra 
     let final_array = [];
-    text_array.forEach(element => {
-        final_array.push(process_word(element));
-        //console.log(process_word(element));
+    text_array.forEach(letter => {
+        if(isLetter(letter)){
+            final_array.push(getAlphabetPossition(letter));
+        }
     });
-    return final_array.join(' ');   //unimos el array para 
+    return final_array.join(' ') 
 }
 
 
 //Test
 console.log(alphabetPosition("The sunset sets at twelve o' clock."));
-console.log(alphabetPosition("The sunset sets at twelve o' clock."));
+console.log(alphabetPosition(" z a b c d e f g"));
+console.log(alphabetPosition("Hola! Esto deberia de dar un numero grande"));

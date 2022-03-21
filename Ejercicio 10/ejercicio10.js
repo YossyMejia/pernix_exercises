@@ -19,3 +19,4 @@ function squareEveryDigit(number){
 console.log(squareEveryDigit(9119));
 console.log(squareEveryDigit(898));
 console.log(squareEveryDigit(345));
+console.log(squareEveryDigit(838211));

@@ -27,3 +27,7 @@ console.log(reverse("world"));
 console.log(reverse("word"));
 console.log(reverse2("world"));
 console.log(reverse2("word"));
+console.log(reverse("123456789"));
+console.log(reverse2("123456789"));
+console.log(reverse("esto al contrario !"));
+console.log(reverse2("esto al contrario !"));
